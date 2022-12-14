@@ -8,7 +8,6 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     ABtn: typeof import('anu-vue')['ABtn']
-    ACard: typeof import('anu-vue')['ACard']
     AppHeader: typeof import('./src/components/AppHeader.vue')['default']
     BackButton: typeof import('./src/components/BackButton.vue')['default']
     IconCommunity: typeof import('./src/components/icons/IconCommunity.vue')['default']

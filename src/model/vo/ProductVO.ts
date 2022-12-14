@@ -34,10 +34,14 @@ export default class ProductVO implements IProductVO {
     return this._data.category;
   }
 
+  get data(): IProductVO {
+    return this._data;
+  }
+
   private readonly _data: IProductVO;
   private _qty: number = 0;
   
-  constructor(data:IProductVO) {
+  constructor(data: IProductVO) {
     this._data = data;
   }
 }
