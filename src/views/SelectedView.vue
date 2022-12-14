@@ -6,7 +6,7 @@ import { storeToRefs } from "pinia";
 import BackButton from "@/components/BackButton.vue";
 const { params: { id } }: any = useRoute();
 const productsStore = useProductsStore();
-const { isLoading, product: product }: any = storeToRefs(productsStore);
+const { isLoading, selected: product }: any = storeToRefs(productsStore);
 console.log('> SelectedView -> setup =', product);
 productsStore.loadProductById(parseInt(id as string));
 </script>
