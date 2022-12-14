@@ -2,10 +2,10 @@
 import { storeToRefs } from "pinia";
 import { useProductsStore } from "@/stores/products";
 import ProductItem from "@/components/ProductItem.vue";
-import ProductVO from "@/model/vo/ProductVO";
+import type ProductVO from "@/model/vo/ProductVO";
 import PageSpinner from "@/components/PageSpinner.vue";
 const productStore = useProductsStore();
-const { list: products, isLoading } = storeToRefs(productStore);
+const { list: products, isLoading }: any = storeToRefs(productStore);
 const onAddProduct = (product: ProductVO) => {
   productStore.addProduct(product);
 }

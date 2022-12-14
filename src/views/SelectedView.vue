@@ -4,11 +4,11 @@ import { useProductsStore } from "@/stores/products";
 import PageSpinner from "@/components/PageSpinner.vue";
 import { storeToRefs } from "pinia";
 import BackButton from "@/components/BackButton.vue";
-const { params: { id } } = useRoute();
+const { params: { id } }: any = useRoute();
 const productsStore = useProductsStore();
-const { isLoading, selected: product } = storeToRefs(productsStore);
+const { isLoading, product: product }: any = storeToRefs(productsStore);
 console.log('> SelectedView -> setup =', product);
-productsStore.loadProductById(parseInt(id));
+productsStore.loadProductById(parseInt(id as string));
 </script>
 <template>
   <PageSpinner v-if="isLoading"/>

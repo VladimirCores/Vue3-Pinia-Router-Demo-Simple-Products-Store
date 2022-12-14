@@ -4,7 +4,7 @@ import { storeToRefs } from "pinia";
 import ProductItem from "@/components/ProductItem.vue";
 import BackButton from "@/components/BackButton.vue";
 const productsStore = useProductsStore();
-const { card, totalPrice } = storeToRefs(productsStore);
+const { card, totalPrice }: any = storeToRefs(productsStore);
 console.log('> CardView -> setup =', card);
 </script>
 <template>
